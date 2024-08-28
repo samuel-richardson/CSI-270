@@ -71,12 +71,13 @@ def exe_7():
         price_list.append(int(price))
     print(price_list)
 
+
 def exe_8():
     start = int(input("Enter beginning year: "))
     end = int(input("Enter the end year: "))
     data = []
     total = 0
-    for year in range(start,end+1):
+    for year in range(start, end+1):
         sales = float(input(f"Enter {year} sales: "))
         data.append((year, sales))
         total += sales
@@ -111,3 +112,9 @@ while True:
         exe_8()
     if selection in "9":
         break
+
+"""
+Reflection
+This lab was mostly review of information. However, it has been helpfull
+to bring the basic conecpts of python to my mind.
+"""

@@ -87,13 +87,27 @@ def exe_8():
     print(f"AVG \t {average}")
 
 
+splash = """
+Enter the number of the exercise to run(1,2,3,4,5,6,7,8 or 9 to exit:
+"""
 
-
-#exe_1()
-#exe_2()
-#exe_3()
-#exe_4()
-#exe_5()
-#exe_6()
-#exe_7()
-exe_8()
+while True:
+    selection = input(splash)
+    if selection in "1":
+        exe_1()
+    if selection in "2":
+        exe_2()
+    if selection in "3":
+        exe_3()
+    if selection in "4":
+        exe_4()
+    if selection in "5":
+        exe_5()
+    if selection in "6":
+        exe_6()
+    if selection in "7":
+        exe_7()
+    if selection in "8":
+        exe_8()
+    if selection in "9":
+        break

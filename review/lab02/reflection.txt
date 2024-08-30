@@ -1,0 +1,2 @@
+These tasks focused on the idea of custom python imports. Through these exercises I refreshed my
+familiarity with imports and modules.

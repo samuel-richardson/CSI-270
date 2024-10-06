@@ -1,0 +1,7 @@
+Array Length,Bubble Random Execution Time,Bubble Sorted Execution Time,Bubble Reversed Execution Time,Selection Random Execution Time,Selection Sorted Execution Time,Selection Reversed Execution Time,Insertion Random Execution Time,Insertion Sorted Execution Time,Insertion Reversed Execution Time
+69,0.11,0.05,0.1,0.05,0.05,0.05,0.0,0.0,0.0
+44,0.05,0.02,0.05,0.02,0.02,0.02,0.0,0.0,0.0
+1000,25.71,13.03,25.75,11.14,11.0,11.2,0.06,0.06,0.06
+1000,26.75,13.06,25.76,11.13,11.18,11.2,0.06,0.06,0.06
+10000,2915.48,1487.15,2933.89,1176.04,1139.48,1213.9,0.86,0.58,0.61
+10000,2885.29,1560.69,2902.35,1172.0,1207.04,1224.86,0.89,0.78,0.71

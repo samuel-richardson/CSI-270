@@ -1,6 +1,9 @@
 from sort import *
 import csv
 import time
+import sys
+
+csv.field_size_limit(sys.maxsize)
 
 with open('arrays.csv', newline='') as f:
     reader = csv.reader(f)

@@ -1,4 +1,4 @@
-from sort import *
+from sort import bubble_sort, insertion_sort, selection_sort
 import csv
 import time
 import sys
@@ -22,7 +22,6 @@ def test_algs(arrays):
                 'Insertion Sorted Execution Time',
                 'Insertion Reversed Execution Time',
                 ]]
-    
 
     def test_time(array, alg):
         start_time = time.time()
@@ -35,7 +34,6 @@ def test_algs(arrays):
         random_array = [int(a) for a in array[1].strip('[').strip(']').split(', ')]
         sorted_array = [int(a) for a in array[2].strip('[').strip(']').split(', ')]
         reversed_array = [int(a) for a in array[3].strip('[').strip(']').split(', ')]
-        
 
         results.append([array_length,
                         test_time(random_array, bubble_sort),

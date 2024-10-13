@@ -23,10 +23,13 @@ def selection_sort(a):
 def insertion_sort(a):
     for i in range(1, len(a)):
         cur = a[i]
-        j = i - 1
+        index = i
 
-        while j >= 0 and cur < a[j]:
-            a[j+1] = a[j]
-            j -= 1
-        a[j+1] = cur
+        for j in range(i-1, -1, -1):
+            if a[j] > cur:
+                a[j+1] = a[j]
+                index = j
+            else:
+                break
+        a[index] = cur
     return a

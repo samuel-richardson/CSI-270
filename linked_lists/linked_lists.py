@@ -132,4 +132,3 @@ linked_list.display()
 print(linked_list.get_at_index(2))
 
 linked_list.display()
-

@@ -109,6 +109,75 @@ class linked_lists:
         else:
             print("Index out of range!")
 
+    def is_sorted(self):
+        if self.head is None or self.head.data == self.tail.data:
+            return True
+
+        cur_node = self.head
+        while cur_node.next:
+            if cur_node > cur_node.next:
+                return False
+            cur_node.data = cur_node.next.data
+
+        return True
+
+    def get_size(self):
+        cur_node = self.head
+        count = 0
+        while cur_node:
+            count += 1
+            cur_node = cur_node.next
+
+        return count
+
+    def get_max(self):
+        if self.head is None:
+            return False
+
+        max_node = self.head
+        cur_node = self.head
+        while cur_node.next:
+            if cur_node.data > max_node.data:
+                max_node = cur_node
+            cur_node = cur_node.next
+
+        return max_node
+
+    def get_min(self):
+        if self.head is None:
+            print("List is empty!")
+            return
+
+        min_node = self.head
+        cur_node = self.head
+        while cur_node.next:
+            if cur_node.data < min_node.data:
+                min_node = cur_node
+            cur_node = cur_node.next
+
+        return min_node
+
+    def append_list(self, linked_list):
+        if linked_list.head is None:
+            return
+
+        cur_node = linked_list.head()
+        while cur_node:
+            self.add_to_tail(cur_node.data)
+            cur_node = cur_node.next
+
+    def reversed(self):
+        if self.head is None:
+            return None
+
+        cur_node = self.head
+        new_list = linked_lists()
+        while cur_node:
+            new_list.add_to_head(cur_node.data)
+            cur_node = cur_node.next
+
+        return new_list
+
     def display(self):
         cur_node = self.head
         while cur_node:
@@ -124,11 +193,5 @@ for i in range(10):
     linked_list.add_to_head(i)
 
 linked_list.display()
-
-linked_list.insert_at_index(200, 1)
-
-linked_list.display()
-
-print(linked_list.get_at_index(2))
-
+print(linked_list.reverse_list())
 linked_list.display()

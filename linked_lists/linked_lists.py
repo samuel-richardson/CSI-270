@@ -178,9 +178,54 @@ class linked_lists:
 
         return new_list
 
+    def reverse_list(self):
+
+        tmp_list = linked_lists()
+
+        while self.head is not None:
+            tmp_list.add_to_head(self.head.data)
+            self.remove_head
+
+        self.append_list(tmp_list)
+
+    def reverse(self):
+
+        cur_node = self.head
+        prev_node = None
+        while cur_node:
+            next_node = cur_node.next
+            cur_node.next = prev_node
+            prev_node = cur_node
+            cur_node = next_node
+
+    def summation(self, k):
+        if self.head is None:
+            return None
+
+        cur_node = self.head
+        total = 0
+        while k > 0:
+            if not cur_node:
+                raise IndexError
+            total += cur_node.data
+            cur_node = cur_node.next
+            k -= 1
+
+        return total
+
+    def remove_duplicates(self):
+        if self.head is None:
+            return None
+        cur_node = self.head
+        while cur_node.next:
+            if cur_node.data == cur_node.next.data:
+                cur_node.next = cur_node.next.next
+                continue
+            cur_node = cur_node.next
+
     def display(self):
         cur_node = self.head
-        while cur_node:
+        while cur_node.next:
             print(cur_node.data, end=" ---> ")
             cur_node = cur_node.next
         print("None")
@@ -190,8 +235,13 @@ class linked_lists:
 linked_list = linked_lists()
 
 for i in range(10):
-    linked_list.add_to_head(i)
+    linked_list.add_to_tail(i)
+
+linked_list.insert_at_index(200, 5)
+linked_list.insert_at_index(200, 5)
+linked_list.insert_at_index(200, 5)
+linked_list.insert_at_index(200, 5)
 
 linked_list.display()
-print(linked_list.reverse_list())
+linked_list.remove_duplicates()
 linked_list.display()
